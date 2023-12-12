@@ -48,10 +48,31 @@ function Navbar({ scrollToSection }) {
           </IconButton>
         )}
         {!isMobile && (
-          <div style={{ display: "flex", gap: "10px", marginRight:'20px' }}>
-            <span onClick={() => handleMenuItemClick('Gallery')}>Gallery</span>
-            <span onClick={() => handleMenuItemClick('Contact')}>Contact</span>
-            <span onClick={() => handleMenuItemClick('MainPage')}>Main Page</span>
+          <div style={{ display: "flex", gap: "30px", marginRight:'20px' }}>
+              <span
+              onClick={() => handleMenuItemClick('Gallery')}
+              style={{ cursor: 'pointer', fontWeight: 'normal' }}
+              onMouseEnter={(e) => (e.target.style.fontWeight = 'bold')}
+              onMouseLeave={(e) => (e.target.style.fontWeight = 'normal')}
+            >
+              Gallery
+            </span>
+            <span
+              onClick={() => handleMenuItemClick('Contact')}
+              style={{ cursor: 'pointer', fontWeight: 'normal' }}
+              onMouseEnter={(e) => (e.target.style.fontWeight = 'bold')}
+              onMouseLeave={(e) => (e.target.style.fontWeight = 'normal')}
+            >
+              Contact
+            </span>
+            <span
+              onClick={() => handleMenuItemClick('MainPage')}
+              style={{ cursor: 'pointer', fontWeight: 'normal' }}
+              onMouseEnter={(e) => (e.target.style.fontWeight = 'bold')}
+              onMouseLeave={(e) => (e.target.style.fontWeight = 'normal')}
+            >
+              Main Page
+            </span>
           </div>
         )}
       </div>
@@ -61,9 +82,22 @@ function Navbar({ scrollToSection }) {
         open={Boolean(anchorEl)}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={() => handleMenuItemClick('Gallery')}>Gallery</MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick('Contact')}>Contact</MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick('MainPage')}>Main Page</MenuItem>
+        <MenuItem
+        onClick={() => handleMenuItemClick("Gallery")}
+        onMouseEnter={(e) => (e.target.style.fontWeight = 'bold')}
+        onMouseLeave={(e) => (e.target.style.fontWeight = 'normal')}
+        style={{cursor: "pointer"}}
+        >Gallery</MenuItem>
+        <MenuItem onClick={() => handleMenuItemClick('Contact')}
+        onMouseEnter={(e) => (e.target.style.fontWeight = 'bold')}
+        onMouseLeave={(e) => (e.target.style.fontWeight = 'normal')}
+        style={{cursor: "pointer"}}
+        >Contact</MenuItem>
+        <MenuItem onClick={() => handleMenuItemClick('MainPage')}
+        onMouseEnter={(e) => (e.target.style.fontWeight = 'bold')}
+        onMouseLeave={(e) => (e.target.style.fontWeight = 'normal')}
+        style={{cursor: "pointer"}}
+        >Main Page</MenuItem>
       </Menu>
     </div>
   );
